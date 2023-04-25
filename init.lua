@@ -6,6 +6,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.wo.relativenumber = true
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -78,6 +80,10 @@ require('lazy').setup({
     config = function()
       require("lsp-file-operations").setup {}
     end
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    requires = { "nvim-treesitter/nvim-treesitter" },
   },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
