@@ -7,6 +7,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.wo.relativenumber = true
+vim.opt.wrap = false
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -119,7 +120,6 @@ require('lazy').setup({
       },
     },
   },
-
   { -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
